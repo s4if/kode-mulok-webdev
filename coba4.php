@@ -1,6 +1,6 @@
 <?php
 // logic disini
-echo "logic disini<br>";
+session_start();
 $username = $_POST["username"];
 $password = $_POST["password"];
 $users = [
@@ -12,6 +12,7 @@ $users["player"] = "1234";
 if (array_key_exists($username, $users)) {
     if ($password == $users[$username]) {
         // arahkan ke beranda
+        $_SESSION["username"] = $username;
         header("Location: beranda.php");
         exit();
     } else {
@@ -23,3 +24,4 @@ if (array_key_exists($username, $users)) {
     header("Location: login.php?notifikasi=Username tidak ditemukan");
     exit();
 }
+// Kode ada disini: https://github.com/s4if/kode-mulok-webdev
