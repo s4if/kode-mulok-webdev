@@ -7,7 +7,7 @@
 </head>
 <body>
     <p><?php echo $_GET["notifikasi"]; ?></p>
-    <form action="coba4.php" method="POST">
+    <form action="index.php?page=do_login" method="POST">
         <label>Username:</label><input type="text" name="username"><br>
         <label>Password:</label><input type="password" name="password"><br>
         <input type="submit" value="Login">
