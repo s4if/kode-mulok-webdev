@@ -7,6 +7,7 @@ $routes = [
     "do_login" => "Login:doLogin",
     "beranda" => "Beranda:index",
     "logout" => "Login:logout",
+    "profil" => "Beranda:profil",
 ];
 
 $function = explode(":", $routes[$page])[1];
